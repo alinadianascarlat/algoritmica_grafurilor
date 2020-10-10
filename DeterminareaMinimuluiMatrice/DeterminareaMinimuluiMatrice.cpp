@@ -1,20 +1,42 @@
-// DeterminareaMinimuluiMatrice.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿//Se consideră tabloul bidimensional cu n linii şi n coloane ce conţine numere 
+//întregi cu cel mult patru cifre fiecare.
+//Să se determine, pentru fiecare coloană, valoarea minimă de pe coloana respectivă.
 
-#include <iostream>
+#include <iostream> 
+#include <fstream>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	ifstream f("mincols.in");
+	ofstream g("mincols.out");
+
+	int a[100][100], n, i, j;
+	f >> n;
+	cout << "n = " << n << endl;
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			f >> a[i][j];
+		}
+	}
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+	int  min;
+	for (j = 0; j < n; j++) {
+		min = a[0][j];
+		for (i = 0; i < n; i++)
+			if (a[i][j] < min)
+				min = a[i][j];
+		g << min << " ";
+		cout << "Minimul coloanei este " << "=" << min << endl;
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
