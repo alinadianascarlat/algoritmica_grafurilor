@@ -10,12 +10,12 @@ using namespace std;
 int main() {
   
         int a[100][100], n, i, j;
-        cout << "Introduceti elementele matricei n =";
+       // cout << "Introduceti elementele matricei n =";
         cin >> n;
 
         for (i = 0; i < n; i++) {
             for (j = 0; j < n; j++) {
-                cout << "a[" << i << "][" << j << "] = ";
+                //cout << "a[" << i << "][" << j << "] = ";
                 cin >> a[i][j];
             }
         }
@@ -26,8 +26,10 @@ int main() {
                 if (j == n)
                     cout << a[i][j] << " ";
             }
+
         for (int i = n - 1; i > 1; i--)
             cout << a[n - 1][i] << " ";
+
         for (int i = n - 1; i >= 1; i--)
             for (int j = n - 1; j >= 1; j--) {
                 if (j == 1)

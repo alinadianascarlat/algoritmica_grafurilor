@@ -5,29 +5,26 @@
 using namespace std;
 int main() {
 	int v[25], n, i, p, x;
-	cout << "Introduceti nr de elemente n = ";
+	//cout << "Introduceti nr de elemente n = ";
 	cin >> n;
-	cout << endl;
-	for (i = 1; i <= n; i++) {
-		cout << " v[" << i << "] = ";
+
+	//cout << "Introduceti numarul ce trebuie inserat: x = ";
+	cin >> x;
+	//cout << "Introduceti pozitia pe care se insereaza numarul: p =";
+	cin >> p;
+
+	for (i = 0; i < n; i++) {
+		//cout << " v[" << i << "] = ";
 		cin >> v[i];
 	}
-	for (i = 1; i < n; i++) 
-		cout << v[i];
-		cout << endl;
-		cout << "Introduceti pozitia pe care se insereaza numarul: p =";
-		cin >> p;
-		cout << "Introduceti numarul ce trebuie inserat: x = ";
-		cin >> x;
 
-		for (i = n; i >= p; i--) 
-			v[i + 1] = v[i];
-			v[p] = x;
-			n++;
-		
-	
-	for (i = 1; i <= n; i++) {
+	for (i = n - 1; i >= p - 1; i--) {
+		v[i + 1] = v[i];
+	}
+	v[p - 1] = x;
+	n++;
+
+	for (i = 0; i < n; i++) {
 		cout << v[i] << " ";
-		cout << endl;
 	}
 }

@@ -6,37 +6,32 @@
 using namespace std;
 
 int main() {
-	int a[100][100], n, m, i, j;
-	cout << "Introduceti numarul de linii n = ";
+	int n, m;
+	//cout << "Introduceti numarul de linii n = ";
 	cin >> n;
-	cout << "Introduceti numarul de coloane m = ";
+	//cout << "Introduceti numarul de coloane m = ";
 	cin >> m;
-	for (i = 1; i <= n; i++) {
-		for (j = 1; j <= n; j++) {
-			cout << "a[" << i << "][" << j << "] = ";
+
+	int a[n][m];
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
 			cin >> a[i][j];
-			cout << endl;
-		}
-	}
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= m; j++) {
-			cout << a[i][j];
-			cout << endl;
 		}
 	}
 
-	int  max = 0, linie;
-	for (int i = 1; i <= n; ++i)
+	int  max = 0, linie = 0;
+	for (int i = 0; i < n; ++i)
 	{
 		int s = 0;
-		for (int j = 1; j <= m; ++j)
+		for (int j = 0; j < m; ++j)
 			if (a[i][j] % 2 == 0)
 				s += a[i][j];
 		if (s > max)
 			max = s, linie = i;
 	}
 
-	cout <<linie << endl;
+	cout << linie + 1;
 	return 0;
 }
 
