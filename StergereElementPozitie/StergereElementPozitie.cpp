@@ -6,28 +6,27 @@ using namespace std;
 
 int a[1501];
 
-int main(){
+int main() {
 
-    int n, i, p;
-    cout << "Introduceti numarul de elemente n = ";
-    cin >> n;
-    cout << "Introduceti pozitia p = ";
-    cin >> p;
-    cout << "Introduceti sirul de elemente: ";
-    
+	int n, i, p;
+	//  cout << "Introduceti numarul de elemente n = ";
+	cin >> n;
+	//cout << "Introduceti sirul de elemente: ";
+	//cout << "Introduceti pozitia p = ";
+	cin >> p;
 
-    for (i = 0; i < n; ++i){
-        cin >> a[i];
-    }
+	for (i = 0; i < n; ++i) {
+		cin >> a[i];
+	}
 
-    for (i = p - 1; i < n - 1; ++i)
-        a[i] = a[i + 1];
-         --n;
+	for (i = p - 1; i < n - 1; ++i)
+		a[i] = a[i + 1];
+	--n;
 
-    for (i = 0; i < n; ++i)
-        cout << a[i] << " ";
+	for (i = 0; i < n; ++i)
+		cout << a[i] << " ";
 
-    return 0;
+	return 0;
 
 }
 
