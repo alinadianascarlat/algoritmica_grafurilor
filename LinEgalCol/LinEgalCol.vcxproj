@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5192a4e7-5055-4f60-8d87-18c5ee1e912a}</ProjectGuid>
-    <RootNamespace>LinColEgale</RootNamespace>
+    <ProjectGuid>{c5000ab7-664a-4dcb-bab4-1733f37f8629}</ProjectGuid>
+    <RootNamespace>LinEgalCol</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LinColEgale.cpp" />
+    <ClCompile Include="LinEgalCol.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

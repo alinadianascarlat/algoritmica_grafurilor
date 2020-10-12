@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2e126bab-2031-4d32-aefb-2ec35cfa153c}</ProjectGuid>
+    <ProjectGuid>{09dcf604-5932-46ba-8c6d-7e9d376c9505}</ProjectGuid>
     <RootNamespace>Chenar</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

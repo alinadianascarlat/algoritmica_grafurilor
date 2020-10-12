@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LinColEgale.cpp">
+    <ClCompile Include="LinEgalCol.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
