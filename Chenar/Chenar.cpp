@@ -1,32 +1,48 @@
+//Se consider? tabloul bidimensional cu n linii ?i n coloane ce con?ine numere naturale cu cel mult patru cifre fiecare.
+//Cerin?a
+//Scrie?i un program care cite?te num?rul natural n ?i cele n* n elemente ale tabloului ?i apoi
+//afi?eaz? elementele chenarului exterior al tabloului, separate prin câte un spa?iu.Chenarul este parcurs în sensul acelor 
+//ceasornic începând din col?ul s?u stânga - sus.Chenarul este format din prima
+//?i ultima linie, prima ?i ultima coloan? a tabloului.
+
+#include <iostream>
 #include <fstream>
+
 using namespace std;
-int a[23][23];
 
-int main() {
-	ifstream cin("chenar.in");
-	ofstream cout("chenar.out");
+ifstream in("chenar.in");
+ofstream out("chenar.out");
+
+int main(){
 	int n;
-	cin >> n;
-	int a[n][n];
-	for (int i = 0; i < n; i++) {
-		cin >> a[i][j];
+	int m[24][24];
+	in >> n;
+
+	for (int i = 0; i < n; i++){
+		for (int j = 0; j < n; j++) {
+			in >> m[i][j];
+
+		}
+	}
+
+	for (int j = 0; j < n; j++){
+		out << m[0][j] << " ";
 
 	}
-	for (int i = 1; i < n; i++) {
-		for (int j = 1; j <= n; j++) {
-			cin >> a[i][j];
-			if (j == n)
-				cout << a[i][j] << " ";
-		}
+
+	for (int i = 1; i < n; i++){
+		out << m[i][n - 1] << " ";
+
 	}
-	for (int i = n - 1; i > 1; i--) {
-		cout << a[n - 1][i] << " ";
+
+	for (int j = n - 2; j >= 0; j--){
+		out << m[n - 1][j] << " ";
+
 	}
-	for (int i = n - 1; i >= 1; i--) {
-		for (int j = n - 1; j >= 1; j--) {
-			if (j == 1)
-				cout << a[i][j] << " ";
-		}
+
+	for (int i = n - 2; i >= 1; i--){
+		out << m[i][0] << " ";
+
 	}
-	return 0;
+
 }

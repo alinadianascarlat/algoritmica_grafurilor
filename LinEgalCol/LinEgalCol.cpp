@@ -4,39 +4,40 @@
 //Elementul a[i,j] va fi numărat dacă suma elementelor de pe linia i este egală cu cea de pe coloana j.
 
 
+
 #include <iostream>
 using namespace std;
 
-int main() {
+int n, a[102][102], V[102], H[102];
 
-	int a[10][10], n, i, j;
-	// cout << "Introduceti elementele matricei n =";
+int main()
+{
 	cin >> n;
-
-	for (i = 0; i < n; i++) {
-		for (j = 0; j < n; j++) {
-			//cout << "a[" << i << "][" << j << "] = ";
+	
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= n; ++j) {
 			cin >> a[i][j];
 		}
 	}
 
-	for (int i = 1; i < n; i++)
-		for (int j = 1; j <= n; j++) {
-			cin >> a[i][j];
-			if (j == n)
-				cout << a[i][j] << " ";
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= n; ++j) {
+			V[i] += a[i][j];
+			H[j] += a[i][j];
 		}
+	}
 
-	for (int i = n - 1; i > 1; i--)
-		cout << a[n - 1][i] << " ";
+	int cnt = 0;
 
-	for (int i = n - 1; i >= 1; i--)
-		for (int j = n - 1; j >= 1; j--) {
-			if (j == 1)
-				cout << a[i][j] << " ";
-		}
+	for (int i = 1; i <= n; ++i) 
+		for (int j = 1; j <= n; ++j)
+			if (V[i] == H[j])
+				cnt++;
 
-	return 0;
+		cout << cnt << " ";
+
+		return 0;
+	
 }
 
 
